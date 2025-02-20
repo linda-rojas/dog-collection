@@ -9,24 +9,51 @@
 </head>
 
 <body>
-    <h1>Colección de Perros</h1>
+    <h1 class="titleDogsRandom">Colección de Perros</h1>
     <span id="span"></span>
-    <section id="listRandomDogs">
-        <h2>Perros aleatorios para ti</h2>
-        <article>
-            <img width="100px" id="img1" alt="img-dog">
-            <button id="btnRandom1">Agregar como favorito</button>
-        </article>
+    <section id="listRandomDogs" class="listRandomDogs">
+        <h2 class="subtitleDogsRandom">Perros aleatorios para ti</h2>
 
-        <article>
-            <img width="100px" id="img2" alt="img-dog">
-            <button id="btnRandom2">Agregar como favorito</button>
-        </article>
+        <section class="sectionCardsDogsRandom">
+            <article class="articleListRandomDogs">
+                <figure class="imgRandomFigure">
+                    <img id="img1" class="imgRandom" alt="img-dog">
+                </figure>
+                <button id="btnRandom1" class="btnRandom">Agregar como favorito</button>
+            </article>
 
-        <button onclick="updateDogRandomList()">ACTUALIZAR</button>
+            <article class="articleListRandomDogs">
+                <figure class="imgRandomFigure">
+                    <img id="img2" class="imgRandom" alt="img-dog">
+                </figure>
+                <button id="btnRandom2" class="btnRandom">Agregar como favorito</button>
+            </article>
+
+            <article class="articleListRandomDogs">
+                <figure class="imgRandomFigure">
+                    <img id="img3" class="imgRandom" alt="img-dog">
+                </figure>
+                <button id="btnRandom3" class="btnRandom">Agregar como favorito</button>
+            </article>
+        </section>
+
+        <button onclick="updateDogRandomList()" class="btnUpdate">ACTUALIZAR</button>
     </section>
 
-    <section id="dogsFavorites">
+    <section id="uploadingImgDog">
+        <h3>Sube la foto de tu Perro</h3>
+
+        <form id="uploadingForm">
+            <input id="file" type="file" name="file">
+            <button type="button" onclick="uploadDogImg()" class="btnUploadPhoto">Subir foto</button>
+        </form>
+    </section>
+
+    <section id="dogsFavorites" class="dogsFavorites">
+
+        <section id="sectionListFavourites">
+
+        </section>
     </section>
 
 </body>
