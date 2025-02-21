@@ -67,6 +67,8 @@ async function loadListDogsFavourites() {
     );
 
     section.innerHTML = "";
+    sectionDogsFavourites.innerHTML = "";
+
     const h2 = document.createElement("h2");
     const h2Text = document.createTextNode("Perros favoritos");
     h2.appendChild(h2Text);

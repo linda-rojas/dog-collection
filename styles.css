@@ -34,6 +34,20 @@ body {
     background-color: rgb(246, 220, 188);
 }
 
+.dogsFavorites {
+    font-size: 18px;
+    color: #001f3d;
+    padding: 0;
+
+}
+
+#sectionListFavourites {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
 .articleFavourites,
 .articleListRandomDogs {
     display: flex;
@@ -45,6 +59,7 @@ body {
     background-color: rgb(55, 112, 113);
     border-radius: 10px;
 }
+
 
 .imgFavourite,
 .imgRandom {
@@ -147,10 +162,4 @@ body {
 
 .btnDeleteFavourite {
     background-color: rgb(243, 96, 80);
-}
-
-
-.dogsFavorites {
-    gap: 2rem;
-    color: #001f3d;
 }
