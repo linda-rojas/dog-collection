@@ -163,3 +163,73 @@ body {
 .btnDeleteFavourite {
     background-color: rgb(243, 96, 80);
 }
+
+
+@media screen and (max-width: 768px) {
+    .sectionCardsDogsRandom {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #sectionListFavourites {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .articleFavourites,
+    .articleListRandomDogs {
+        width: 90%;
+        height: auto;
+    }
+
+    .imgFavouriteFigure,
+    .imgRandomFigure {
+        width: 90%;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .btnRandom,
+    .btnDeleteFavourite {
+        width: 60%;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #uploadingForm {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    #file {
+        width: 90%;
+    }
+
+    .btnUpdate,
+    .btnUploadPhoto {
+        width: 40%;
+    }
+
+    .titleDogsRandom {
+        font-size: 28px;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .subtitleDogsRandom {
+        font-size: 20px;
+    }
+
+    .listRandomDogs,
+    #uploadingImgDog,
+    .dogsFavorites {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
