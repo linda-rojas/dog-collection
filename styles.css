@@ -1,51 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #001f3d;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 .titleDogsRandom {
     text-align: center;
     font-size: 40px;
+    padding: 1rem;
 }
 
 .subtitleDogsRandom {
     color: #001f3d;
     font-size: 28px;
+    text-align: center;
 }
 
 #sectionListFavourites,
 .dogsFavorites,
 #uploadingImgDog,
 .listRandomDogs {
-    width: fit-content;
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 30px;
+    margin: 0 auto;
+    padding: 2rem;
     border-radius: 20px;
     gap: 1rem;
     background-color: rgb(246, 220, 188);
 }
 
+
 .dogsFavorites {
     font-size: 18px;
     color: #001f3d;
     padding: 0;
-
 }
 
 #sectionListFavourites {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+    width: 100%;
 }
 
 .articleFavourites,
@@ -54,37 +59,48 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 340px;
+    width: 100%;
+    max-width: 340px;
     height: 370px;
     background-color: rgb(55, 112, 113);
     border-radius: 10px;
+    margin: 0 auto;
 }
 
+.imgFavouriteFigure,
+.imgRandomFigure {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
 .imgFavourite,
 .imgRandom {
     width: 100%;
     height: 100%;
-}
-
-.imgFavouriteFigure,
-.imgRandomFigure {
-    width: 300px;
-    height: 280px;
     object-fit: contain;
-    margin: 0;
+    display: block;
 }
-
 
 .sectionCardsDogsRandom {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 3rem;
+    width: 100%;
 }
 
 .btnDeleteFavourite,
 .btnRandom {
     height: 50px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border: 0;
     background-color: #d9a71f;
     color: white;
@@ -106,7 +122,7 @@ body {
 .btnUploadPhoto:hover,
 .btnUpdate:hover {
     background-color: #1dae59;
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 #uploadingImgDog {
@@ -126,6 +142,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
+    width: 100%;
+    max-width: 300px;
 }
 
 #file:hover {
@@ -145,11 +163,12 @@ body {
 #uploadingForm {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .btnUploadPhoto {
-    margin-bottom: auto;
-    margin-top: auto;
     border: none;
     font-size: 16px;
     background-color: #4CAF50;
@@ -157,7 +176,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     height: 45px;
-    width: 100px;
+    width: 100%;
+    max-width: 140px;
 }
 
 .btnDeleteFavourite {
@@ -165,71 +185,54 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
-    .sectionCardsDogsRandom {
-        flex-direction: column;
-        align-items: center;
+/*  Tablet: 2 columnas */
+@media screen and (max-width: 1024px) {
+    #sectionListFavourites {
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 
+    #sectionListFavourites,
+    .listRandomDogs,
+    #uploadingImgDog {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+}
+
+/*  Móvil: 1 columna */
+@media screen and (max-width: 768px) {
     #sectionListFavourites {
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .articleFavourites,
-    .articleListRandomDogs {
-        width: 90%;
-        height: auto;
-    }
-
-    .imgFavouriteFigure,
-    .imgRandomFigure {
-        width: 90%;
-        height: auto;
-        margin-top: 1rem;
-    }
-
-    .btnRandom,
-    .btnDeleteFavourite {
-        width: 60%;
-        border-radius: 0.5rem;
-        margin-top: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    #uploadingForm {
-        flex-direction: column;
-        align-items: center;
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
-
-    #file {
-        width: 90%;
-    }
-
-    .btnUpdate,
-    .btnUploadPhoto {
-        width: 40%;
+        gap: 1.5rem;
     }
 
     .titleDogsRandom {
         font-size: 28px;
-        padding: 0 1rem;
-        text-align: center;
     }
 
     .subtitleDogsRandom {
         font-size: 20px;
     }
 
-    .listRandomDogs,
-    #uploadingImgDog,
-    .dogsFavorites {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
+    #uploadingForm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btnUpdate,
+    .btnUploadPhoto {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #file {
+        width: 90%;
+    }
+
+    .listRandomDogs {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
